@@ -1,0 +1,11 @@
+C:\Code\GitHub\LazyMod\LethalCompanyTemplate\bin\Debug\netstandard2.1\LethalCompanyTemplate.deps.json
+C:\Code\GitHub\LazyMod\LethalCompanyTemplate\bin\Debug\netstandard2.1\LethalCompanyTemplate.dll
+C:\Code\GitHub\LazyMod\LethalCompanyTemplate\bin\Debug\netstandard2.1\LethalCompanyTemplate.pdb
+C:\Code\GitHub\LazyMod\LethalCompanyTemplate\obj\Debug\netstandard2.1\LethalCompanyTemplate.csproj.AssemblyReference.cache
+C:\Code\GitHub\LazyMod\LethalCompanyTemplate\obj\Debug\netstandard2.1\PluginInfo.cs
+C:\Code\GitHub\LazyMod\LethalCompanyTemplate\obj\Debug\netstandard2.1\LethalCompanyTemplate.GeneratedMSBuildEditorConfig.editorconfig
+C:\Code\GitHub\LazyMod\LethalCompanyTemplate\obj\Debug\netstandard2.1\LethalCompanyTemplate.AssemblyInfoInputs.cache
+C:\Code\GitHub\LazyMod\LethalCompanyTemplate\obj\Debug\netstandard2.1\LethalCompanyTemplate.AssemblyInfo.cs
+C:\Code\GitHub\LazyMod\LethalCompanyTemplate\obj\Debug\netstandard2.1\LethalCompanyTemplate.csproj.CoreCompileInputs.cache
+C:\Code\GitHub\LazyMod\LethalCompanyTemplate\obj\Debug\netstandard2.1\LethalCompanyTemplate.dll
+C:\Code\GitHub\LazyMod\LethalCompanyTemplate\obj\Debug\netstandard2.1\LethalCompanyTemplate.pdb
