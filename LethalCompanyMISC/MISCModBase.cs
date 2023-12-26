@@ -3,6 +3,8 @@ using HarmonyLib;
 using UnityEngine;
 using System.IO;
 using LethalCompanyMISC.Patches;
+using System;
+using BepInEx.Logging;
 
 namespace LethalCompanyMISC
 {
@@ -13,7 +15,10 @@ namespace LethalCompanyMISC
 
         public static MISCModBase Instance { get; private set; }
 
+        public ManualLogSource PublicLogger { get; private set; }
+
         public AudioClip UltraInstinctClip { get; private set; }
+
 
         private void Awake()
         {
@@ -23,6 +28,7 @@ namespace LethalCompanyMISC
                 return;
 
             Instance = this;
+            PublicLogger = Logger;
 
             Logger.LogInfo($"{PluginInfo.PLUGIN_GUID} Singleton has loaded.");
 
@@ -33,7 +39,7 @@ namespace LethalCompanyMISC
             Logger.LogInfo($"{bundlePath}");
 
             AssetBundle audioAssetBundle = AssetBundle.LoadFromFile(bundlePath);
-            if ((Object)(object)audioAssetBundle == null)
+            if (audioAssetBundle == null)
             {
                 Logger.LogError("Failed to load audio assets!");
                 return;
@@ -51,8 +57,22 @@ namespace LethalCompanyMISC
             UltraInstinctClip = newSFX[0];
 
             harmony.PatchAll(typeof(JesterPatch));
+            harmony.PatchAll(typeof(ManualCameraRendererPatch));
 
             Logger.LogInfo("Ultra Instinct Mod Loaded.");
+        }
+
+        public static string PrintTreeOfGameObject(Transform targetObject, int depth)
+        {
+            var depthString = new string('-', depth);
+            var buildString = $"{depthString + targetObject.name}";
+
+            foreach (Transform child in targetObject.transform)
+            {
+                buildString += Environment.NewLine + PrintTreeOfGameObject(child, depth + 1);
+            }
+
+            return buildString;
         }
     }
 }
